@@ -8,6 +8,9 @@ composer require pierreminiggio/youtube-api-wrapper
 ```php
 use PierreMiniggio\YoutubeAPI\YoutubeAPI;
 
-$provider = new YoutubeAPI();
-$accessToken = $provider->get('yourClientId', 'yourClientSecret', 'yourRefreshToken');
+$youtubeApi = new YoutubeAPI('yourAccessToken');
+
+$videoIds = $youtubeApi->getMostRecentVideoIdsForChannel('yourChannelId', 10);
+// or
+$video = $youtubeApi->getVideoDetails('yourVideoId');
 ```
