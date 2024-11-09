@@ -6,13 +6,13 @@ class YoutubeVideo
 {
 
     public function __construct(
-        private string $channel,
-        private string $id,
-        private string $url,
-        private string $thumbnail,
-        private string $title,
-        private string $description,
-        private array $tags
+        protected string $channel,
+        protected string $id,
+        protected string $url,
+        protected string $thumbnail,
+        protected string $title,
+        protected string $description,
+        protected array $tags
     )
     {
     }
